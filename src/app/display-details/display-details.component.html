@@ -1,0 +1,11 @@
+<button
+    class='btn btn-primary'
+    (click)="onDisplayDetailsClick()">
+    Display Details
+</button>
+<p *ngIf="displayDetails">These are the secret details o.O</p>
+<div *ngFor="let item of log; let i = index"
+    [ngStyle]="{'background-color': i >= 4 ? 'blue' : 'transparent'}"
+    [ngClass]="{fifthItemOrHigher: i >= 4}">
+    {{ item }}
+</div>
